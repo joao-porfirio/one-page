@@ -1,0 +1,27 @@
+$bgSite: #d7d4ff;
+$buttonColor: #6c63ff;
+
+$white: #ffffff;
+$white300: #f9f9f9; 
+
+$title: #2b2b2b;
+$text: #555555;
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: $bgSite;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex: 50%;
+}
+
+input[type=button]{
+  background-color: $buttonColor;
+  color: $white;
+}
