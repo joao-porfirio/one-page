@@ -8,20 +8,20 @@ const Footer = () => {
       <h2 className="footer__titulo">Entre em contato</h2>
       <form className="footer__formulario .formulario">
         <ul className="formulario__container">
-          <li>
-            <input type="text" id="first-name" placeholder="Nome"/>
+          <li className="formulario__container-item">
+            <input className="formulario__field" type="text" id="first-name" placeholder="Nome"/>
           </li>
-          <li>
-            <input type="email" id="email" placeholder="E-mail"/>
+          <li className="formulario__container-item">
+            <input className="formulario__field" type="email" id="email" placeholder="E-mail"/>
           </li>
-          <li>
-            <input type="tel" id="phone" placeholder="Telefone"/>
+          <li className="formulario__container-item">
+            <input className="formulario__field" type="tel" id="phone" placeholder="Telefone"/>
           </li>
-          <li>
-            <textarea rows="6" id="message" placeholder="Mensagem..."></textarea>
+          <li className="formulario__container-item">
+            <textarea className="formulario__field" rows="5" id="message" placeholder="Mensagem..."></textarea>
           </li>
-          <li>
-            <button type="submit">Enviar mensagem</button>
+          <li className="formulario__container-item">
+            <button className="formulario__container-button" type="submit">Enviar mensagem</button>
           </li>
         </ul>
       </form>
