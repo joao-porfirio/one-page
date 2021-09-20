@@ -5,18 +5,22 @@ import header_img from '../../assets/img/image.svg'
 
 const Header = () => {
   return (
-    <div>
-      <div class="columns">
-        <div class="column">
-          <h1>Lorem ipsum dolor sit amet</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu massa sit amet augue consectetur ullamcorper non ac massa.</p>
-          <input type="button" value="Botão"/>
+    // <div>
+      <header className="header">
+        <div className="header__column">
+          <article className="header__conteudo">
+            <h1 className="header__titulo">Lorem ipsum dolor sit amet</h1>
+            <p className="header__descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu massa sit amet augue consectetur ullamcorper non ac massa.</p>
+            <button className="header__button">Botão</button>
+          </article>
+         
+
         </div>
-        <div class="column">
-          <img src={header_img} alt="Banner" />
+        <div className="header__column">
+          <img className="header__imagem" src={header_img} alt="Banner" />
         </div>
-      </div>
-    </div>
+      </header>
+    // </div>
   )
 }
 
