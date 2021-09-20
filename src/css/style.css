@@ -1,4 +1,20 @@
-.columns {
+body {
+  background: #f9f9f9;
+}
+
+@font-face {
+  font-family: "Merriweather-Bold";
+  src: url("../assets/fonts/Merriweather-Bold.ttf");
+}
+@font-face {
+  font-family: "Merriweather-Regular";
+  src: url("../assets/fonts/Merriweather-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("../assets/fonts/Lato-Regular.ttf");
+}
+.header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -7,14 +23,270 @@
   justify-content: center;
   align-items: center;
 }
-
-.column {
-  flex: 50%;
+@media (max-width: 767.98px) {
+  .header {
+    flex-direction: column;
+  }
 }
-
-input[type=button] {
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .header {
+    flex-direction: column;
+  }
+}
+.header__column {
+  flex: 50%;
+  margin: 80px 0;
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .header__column {
+    margin: 30px 0 55px 0;
+  }
+}
+.header__conteudo {
+  margin: 0 8%;
+  text-align: left;
+  max-width: 45%;
+}
+@media (max-width: 767.98px) {
+  .header__conteudo {
+    max-width: 100%;
+    margin: 0 4%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .header__conteudo {
+    max-width: 80%;
+    margin: 0 6%;
+  }
+}
+.header__titulo {
+  margin-bottom: 2rem;
+  font-family: "Merriweather-Regular";
+  font-size: 3rem;
+  color: #2b2b2b;
+}
+.header__descricao {
+  line-height: 1.8;
+  font-family: "Lato-Regular";
+  font-size: 1.9rem;
+  margin-bottom: 30px;
+  color: #555555;
+}
+@media (max-width: 767.98px) {
+  .header__descricao {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .header__descricao {
+    font-size: 1.9rem;
+  }
+}
+.header__button {
   background-color: #6c63ff;
   color: #ffffff;
+  box-shadow: 0px 5px 5px rgba(23, 23, 23, 0.1);
+  border-radius: 5px;
+  padding: 15px 50px;
+  font-family: "Lato-Regular";
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+.header__button:hover {
+  opacity: 0.8;
+}
+.header__logo {
+  max-width: 500px;
+  max-height: 350px;
+}
+@media (max-width: 767.98px) {
+  .header__logo {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 5% 10%;
+}
+@media (max-width: 767.98px) {
+  .card {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .card {
+    margin: 0 10px;
+  }
+}
+.card__container {
+  margin-bottom: 2em;
+  border-radius: 8px;
+  padding: 30px 6%;
+  flex: 0 1 33.33%;
+}
+@media (max-width: 767.98px) {
+  .card__container {
+    padding: 1.5rem 0;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .card__container {
+    flex: 0 1 50%;
+    padding: 30px 60px;
+  }
+}
+.card__container:last-child {
+  margin-bottom: 40px;
+}
+.card__thumbnail {
+  height: 200px;
+}
+.card__thumbnail-first {
+  height: 100%;
+  background: #FF6363;
+}
+.card__thumbnail-second {
+  height: 100%;
+  background: #63ECFF;
+}
+.card__thumbnail-third {
+  height: 100%;
+  background: #F363FF;
+}
+.card__thumbnail-fourth {
+  height: 100%;
+  background: #63FF73;
+}
+.card__thumbnail-fifth {
+  height: 100%;
+  background: #FFDD63;
+}
+.card__thumbnail-sixth {
+  height: 100%;
+  background: #6663FF;
+}
+.card__content {
+  padding: 1rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.card__content-titulo {
+  font-family: "Merriweather-Bold";
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 2.4rem;
+}
+.card__content-descricao {
+  font-family: "Lato-Regular";
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.first {
+  background: green;
+}
+
+.footer {
+  background: #d7d4ff;
+  width: 100%;
+}
+.footer__titulo {
+  font-family: "Merriweather-Regular";
+  font-size: 3rem;
+  color: #2b2b2b;
+  margin: 40px 0;
+}
+.footer__formulario {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+@media (max-width: 767.98px) {
+  .footer__formulario {
+    width: 100%;
+  }
+}
+
+.formulario {
+  box-sizing: border-box;
+}
+.formulario__container {
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+.formulario__container-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 767.98px) {
+  .formulario__container-item {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+.formulario__field {
+  width: 60%;
+  margin: 0 auto;
+  padding: 18px 10px;
+  border: none;
+  border-radius: 6px;
+  font-family: "Lato-Regular";
+  font-size: 1.8rem;
+  color: #555555;
+  outline: none;
+}
+@media (max-width: 767.98px) {
+  .formulario__field {
+    width: 100%;
+  }
+}
+.formulario__container-button {
+  width: 60%;
+  margin-left: auto;
+  margin: 0 auto;
+  padding: 18px 10px;
+  border: none;
+  background: #6c63ff;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  border-radius: 5px;
+  font-family: "Lato-Regular";
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.formulario__container-button:hover {
+  opacity: 0.8;
+}
+@media (max-width: 767.98px) {
+  .formulario__container-button {
+    width: 100%;
+  }
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
