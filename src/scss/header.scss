@@ -1,0 +1,22 @@
+.columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: $bgSite;
+  justify-content: center;
+  align-items: center;
+
+  @include for-phone-only{
+    flex-direction: column;
+  }
+}
+
+.column {
+  flex: 50%;
+}
+
+input[type=button]{
+  background-color: $buttonColor;
+  color: $white;
+}
