@@ -15,27 +15,20 @@
   &__container{
     margin-bottom: 2em;	
     border-radius: 8px;
-    padding: 30px 100px;
+    padding: 30px 6%;
     flex: 0 1 33.33%;
     @include for-phone-only{
       padding: 1.5rem 0;
       margin-bottom: 0;	
     }
-    // &:hover .card__content{
-    //   display: block;
-    // }
-    // &:hover{
-    //   // padding: 40px 30px;
-    //   img{
-    //     // transform: scaleX(-1);
-    //     // transition: 1s all ease;
-    //   }
-    // }
+    
     @include for-tablet-only{
       flex: 0 1 50%;
       padding: 30px 60px;
     }
-
+    &:last-child{
+      margin-bottom: 40px;
+    }
   }
 
   &__thumbnail{
