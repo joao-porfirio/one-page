@@ -8,12 +8,16 @@
     color: $title;
     margin: 40px 0;
   }
+
   &__formulario{
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 30px;
 
+    @include for-phone-only{
+      width: 100%;
+    }
   }
 }
 
@@ -25,34 +29,42 @@
     padding: 0;
     max-width: 800px;
     margin: 0 auto;
-    width: 50%;
+    width: 100%;
   }
-  &__container li{
+
+  &__container-item{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 20px;
+    @include for-phone-only{
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
   }
 
-  &__container input,  &__container textarea{
-    width: 100%;
-  }
-
-  
-  &__container li input, &__container li textarea{
-    padding: 24px 10px;
+  &__field{
+    width: 60%;
+    margin: 0 auto;
+    padding: 18px 10px;
     border: none;
     border-radius: 6px;
     font-family: $lato-regular;
     font-size: 1.8rem;
     color: $text;
+    outline: none;
+
+    @include for-phone-only{
+      width: 100%;
+    }
   }
 
-  &__container button{
-    width: 100%;
+  &__container-button{
+    width: 60%;
     margin-left: auto;
     margin: 0 auto;
-    padding: 15px 10px;
+    padding: 18px 10px;
     border: none;
     background: $buttonColor;
     color: $white;
@@ -62,5 +74,13 @@
     font-size: 2rem;
     font-weight: 700;
     margin-top: 15px;
+    cursor: pointer;
+    &:hover{
+      opacity: 0.8;
+    }
+
+    @include for-phone-only{
+      width: 100%;
+    }
   }
 }
